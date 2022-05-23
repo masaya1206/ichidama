@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- 画像入手先 https://www.ac-illust.com/main/detail.php?id=22084934&word=そろばん%E3%80%80青&searchId=3992839116 -->
+<style type="text/css">
+  h1 { margin: 0; }
+input[type=checkbox] {
+    display: none;
+}
+
+.checkbox01 {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    padding: 12px 21px;
+    position: relative;
+    width: auto;
+}
+.checkbox01::before {
+    background-image: none, url("ichidama00.png");
+    background-size: 100% auto, 100%;
+    background-position: top 50% left 50%, 0 0;
+    background-repeat: no-repeat, no-repeat;
+    top: 0.25em;
+    margin: 0 3px 0 0;
+    
+    content: '';
+    display: block;
+    height: 32px;
+    left: 10px;
+    margin-top: -13px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+}
+.checkbox01::after {
+    background-image: none, url("ichidama01.png");
+    background-size: 100% auto, 100%;
+    background-position: top 50% left 50%, 0 0;
+    background-repeat: no-repeat, no-repeat;
+ 
+    content: '';
+    display: block;
+    opacity: 0;
+    position: absolute;
+}
+
+input[type=checkbox]:checked + .checkbox01::before {
+    background-image: url("ichidama01.png"), url("ichidama00.png");
+}
+input[type=checkbox]:checked + .checkbox01::after {
+    opacity: 1;
+}
+
+.check-box {
+  cursor: pointer;
+}
+
+</style>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <h1>2進数計算<h4>(一珠そろばんversion)</h4></h1>
+    <table border="10" rules="groups" >
+      <colgroup span="4">
+      <colgroup span="5">　<!-- 枠線描画　(未解決) -->
+      <colgroup span="4">
+      <colgroup span="4">
+	<tr>　<!-- 以下、一珠ボタン(checkbox01クラス)　配置 -->
+	  <th><input type="checkbox" class="value" name="checkbox01" id="i01">
+	      <label for="i01" class="checkbox01"></label>
+	  </th>
+	  <th><input type="checkbox" class="value" name="checkbox01" id="i02">
+	      <label for="i02" class="checkbox01"></label>
+	  </th>
+	  <th><input type="checkbox" class="value" name="checkbox01" id="i03">
+	      <label for="i03" class="checkbox01"></label>
+	  </th>
+	  <th><input type="checkbox" class="value" name="checkbox01" id="i04">
+	      <label for="i04" class="checkbox01"></label>
+	  </th>
+	  <th><input type="checkbox" class="value" name="checkbox01" id="i05">
+	      <label for="i05" class="checkbox01"></label>
+	  </th>
+	  <th><input type="checkbox" class="value" name="checkbox01" id="i06">
+	      <label for="i06" class="checkbox01"></label>
+	  </th>
+	  <th><input type="checkbox" class="value" name="checkbox01" id="i07">
+	      <label for="i07" class="checkbox01"></label>
+	  <th>
+	  <th><input type="checkbox" class="value" name="checkbox01" id="i08">
+	      <label for="i08" class="checkbox01"></label>
+	  </th>
+	  <th><input type="checkbox" class="value" name="checkbox01" id="i09">
+	      <label for="i09" class="checkbox01"></label>
+	  </th>
+	  <th><input type="checkbox" class="value" name="checkbox01" id="i10">
+	      <label for="i10" class="checkbox01"></label>
+	  </th>
+	  <th><input type="checkbox" class="value" name="checkbox01" id="i11">
+	      <label for="i11" class="checkbox01"></label>
+	  </th>
+	  <th><input type="checkbox" class="value" name="checkbox01" id="i12">
+	      <label for="i12" class="checkbox01"></label>
+	  </th>
+	  <th><input type="checkbox" class="value" name="checkbox01" id="i13">
+	      <label for="i13" class="checkbox01"></label>
+	  </th>
+	  <th><input type="checkbox" class="value" name="checkbox01" id="i14">
+	      <label for="i14" class="checkbox01"></label>
+	  </th>
+	  <th><input type="checkbox" class="value" name="checkbox01" id="i15">
+	      <label for="i15" class="checkbox01"></label>
+	  </th>
+	  <th><input type="checkbox" class="value" name="checkbox01" id="i16">
+	      <label for="i16" class="checkbox01"></label>
+	  </th>
+	</tr>
+
+	</table>
+    <BR>
+    <button id="calc">計算</button>
+    <input type="button" value="リセット" onclick="window.location.reload(false);" />
+    <div id="output"></div>
+
+  </body>
+</html>
